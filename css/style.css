@@ -1,0 +1,153 @@
+/* header */
+header {
+  width: 100%;
+  background-color: #fff;
+}
+header h1 a {
+  display: block;
+  height: 35px;
+  text-indent: -9999px;
+  overflow: hidden;
+  background: url(../images/laneige-logo.svg) no-repeat;
+}
+header h1 {
+  padding: 13px 0 0 50px;
+  width: 150px;
+}
+.header_area{
+  height: 60px;
+}
+
+/* gnb */
+.gnb{
+  box-sizing: border-box;
+}
+.gnb_tit{
+  font-size: 1.125rem;
+  line-height: 1;
+  padding: 1.2em 20px 0;
+}
+.gnb_tit a{
+  padding-bottom: 30px;
+
+}
+.gnb_depth{
+  background: #f7f7f7;
+  position: absolute;
+  left: 0;
+  top: 60px;
+  z-index: 100;
+  width: 100%;
+  display: none;
+}
+.gnb li:hover .gnb_depth{
+  display: block;
+}
+.gnb_depth h2{
+  font-size: 1rem;
+}
+.gnb_depth li{
+  font-size: 1rem;
+  padding: 17px 20px 14px;
+}
+.gnb_depth img{
+  width: 260px;
+}
+.gnb_depth b{
+  color: #4477be;
+  font-size: 15px;
+  display: block;
+  margin: 20px 0 10px 0;
+}
+.gnb_depth2{
+  padding-right: 70px;
+}
+.gnb_depth2 li{
+  font-size: 16px;
+  padding: 0.5em 0;
+}
+
+
+/* banner */
+.banner {
+  /* width: 100%; */
+  max-width: 1920px;
+  margin: auto;
+}
+
+/* slide1 */
+.BannerSwiper {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+/* slide2 */
+.ContentSwiper {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ContentSwiper .swiper-slide {
+  height: calc((100% - 30px) / 2);
+  width: 33.3%;
+  height: auto;
+  text-align: center;
+}
+.ContentSwiper .swiper-slide img {
+  max-width: 100%;
+}
+
+/* content1 */
+.content1 h2 {
+  font-size: 42px;
+  text-align: center;
+  padding-top: 90px;
+}
+
+/* content2 */
+.content2 {
+  background-color: #fff;
+}
+.content2_area {
+  margin-top: 200px;
+}
+.content2_area a img {
+  width: 100%;
+}
+.content2_area li {
+  padding-left: 45px;
+  margin: 0 auto;
+  /* margin: 0 0 50px 40px; */
+  box-sizing: border-box;
+  position: relative;
+}
+.content2_area li:first-child {
+  margin: 0 0 50px 0;
+}
+/* content3 */
+.content3 {
+  /* width: 100%; */
+  background: linear-gradient(140deg, #9dc0ed, #fcf4f6);
+}
+.content3_area {
+  margin-top: 150px;
+}
+.content3_area li {
+  padding-left: 45px;
+  margin: 0 auto;
+  /* margin: 0 0 50px 40px; */
+  box-sizing: border-box;
+  position: relative;
+}
+.content3_area li a img {
+  /* box-sizing: border-box;
+    position: relative; */
+  width: 100%;
+}
+.content3_area .c3_left_bottom {
+  margin-bottom: 50px;
+}
+.content3_area .c3_right_bottom {
+  margin: 120px 0 50px;
+}
