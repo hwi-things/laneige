@@ -396,7 +396,18 @@
                 /></a>
               </li>
             </ul>
-            <div class="swiper-pagination"></div>
+            <div
+              class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal" 
+            >
+              <span
+                class="swiper-pagination-bullet swiper-pagination-bullet-active"
+                aria-current="true"
+              ></span>
+              <span class="swiper-pagination-bullet"></span
+              ><span class="swiper-pagination-bullet"></span
+              ><span class="swiper-pagination-bullet"></span
+              ><span class="swiper-pagination-bullet"></span>
+            </div>
           </div>
         </section>
         <section class="content1">
@@ -412,6 +423,9 @@
                       >CREAM SKIN REFINER</span
                     >
                     <strong class="c1_bestseller-list_kr">크림 스킨</strong>
+                    <span class="material-symbols-outlined">
+                      reviews
+                      </span>
                     <p class="c1_bestseller-list_txt">
                       스킨인데 뛰어난 보습지속력과, 산뜻한 <br />
                       사용감으로 이만한 스킨은 없는 것 <br />
@@ -428,6 +442,9 @@
                     />
                     <span class="c1_bestseller-list_en">NEO CUSHION</span>
                     <strong class="c1_bestseller-list_kr">네오 쿠션</strong>
+                    <span class="material-symbols-outlined">
+                      reviews
+                      </span>
                     <p class="c1_bestseller-list_txt">
                       마스크때문에 매트한 쿠션 샀는데 지금까지 썼던<br />쿠션
                       중에 제일 마무리감이 좋았어요.
@@ -443,6 +460,9 @@
                     />
                     <span class="c1_bestseller-list_en">RADIAN-C CREAM</span>
                     <strong class="c1_bestseller-list_kr">래디언-C 크림</strong>
+                    <span class="material-symbols-outlined">
+                        reviews
+                        </span>
                     <p class="c1_bestseller-list_txt">
                       벌써 3통째에요! 기미가 고민인 요즘 사용하면 <br />
                       피부가 밝아지고 확실히 잡티가 옅어지네요~
@@ -461,7 +481,9 @@
                     >
                     <strong class="c1_bestseller-list_kr"
                       >워터 슬리핑 마스크 EX</strong
-                    >
+                    ><span class="material-symbols-outlined">
+                      reviews
+                      </span>
                     <p class="c1_bestseller-list_txt">
                       수분감 충만한 슬리핑팩! 밤에 듬뿍 <br />
                       바르고 자고 일어나면 아침에 화장이 <br />
@@ -481,7 +503,9 @@
                     >
                     <strong class="c1_bestseller-list_kr"
                       >립 슬리핑 마스크 EX</strong
-                    >
+                    ><span class="material-symbols-outlined">
+                      reviews
+                      </span>
                     <p class="c1_bestseller-list_txt">
                       자기전 딱 바르고 나면 다음 날 입술 <br />
                       컨디션이 넘넘 좋아져서 요즘 매일 사용 <br />
@@ -501,7 +525,9 @@
                     >
                     <strong class="c1_bestseller-list_kr"
                       >워터뱅크 블루 히알루로닉 크림</strong
-                    >
+                    ><span class="material-symbols-outlined">
+                      reviews
+                      </span>
                     <p class="c1_bestseller-list_txt">
                       유분기가 겉도는 느낌이 아닌 <br />
                       정말 속까지 수분이 <br />
@@ -686,6 +712,7 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./js/slide.js">
     <!-- Initialize Swiper -->
     <script>
       var swiper1 = new Swiper(".BannerSwiper", {
@@ -716,7 +743,6 @@
         spaceBetween: 30,
         pagination: {
           el: ".swiper-pagination",
-          clickable: true,
         },
       });
     </script>
