@@ -44,6 +44,9 @@ header h1 {
 .btn li:nth-child(3) span {
   font-size: 30px;
 }
+.btn li:last-child {
+  display: none;
+}
 /* gnb */
 .gnb {
   box-sizing: border-box;
@@ -205,8 +208,9 @@ header h1 {
   max-width: 20rem;
   max-height: 24.6875rem;
 }
-.ContentSwiper .swiper-slide a:hover {
-  transform: matrix(1, 0, 0, 1, 0, 0);
+.ContentSwiper .swiper-slide a:hover img{
+  transform: rotatez(347deg); 
+  display: inline-block;
 }
 .swiper-button-next:after,
 .swiper-button-prev:after {
@@ -214,17 +218,17 @@ header h1 {
   font-size: 25px !important;
   margin-left: 35px;
 }
-.swiper-button-prev:after{
+.swiper-button-prev:after {
   margin-right: 34px;
 }
-.c1_bestseller-list_en{
+.c1_bestseller-list_en {
   color: #4477be;
   font-weight: 600;
   display: block;
   letter-spacing: 1px;
   margin-top: 18px;
 }
-.c1_bestseller-list_kr{
+.c1_bestseller-list_kr {
   font-size: 1.1875rem;
   color: #2b2b2b;
   display: block;
@@ -232,24 +236,22 @@ header h1 {
   margin-bottom: 1.3em;
   font-weight: 400;
 }
-.c1_bestseller-list_txt{
-    color: #5f5f5f;
-    font-size: 1rem;
-    margin-bottom: 0.7em;
-    font-weight: 300;
+.c1_bestseller-list_txt {
+  color: #5f5f5f;
+  font-size: 1rem;
+  margin-bottom: 0.7em;
+  font-weight: 300;
 }
-.c1_bestseller-list_id{
+.c1_bestseller-list_id {
   display: block;
   margin-top: 0.3125rem;
   font-size: 0.875rem;
   color: rgba(0, 0, 0, 0.6);
-
 }
-.swiper-slide .material-symbols-outlined{
+.swiper-slide .material-symbols-outlined {
   color: rgba(0, 0, 0, 0.4);
   font-weight: 300;
   font-size: 1.8em;
-
 }
 /* content1 */
 
@@ -267,10 +269,9 @@ header h1 {
   text-align: center;
   padding-top: 90px;
 }
-
 /* content2 */
-.content2 {
-  background-color: #fff;
+.bg_gradient{
+  background: linear-gradient(177deg,#fff, #fcf4f6,  #9dc0ed, #fcf4f6);
 }
 .content2_area {
   margin-top: 200px;
@@ -288,7 +289,7 @@ header h1 {
 .content2_area li:first-child {
   margin: 0 0 50px 0;
 }
-.c2_sub_tit{
+.c2_sub_tit {
   display: block;
   margin-top: 0.9em;
   margin-bottom: 0.3em;
@@ -296,20 +297,14 @@ header h1 {
   font-size: 1.1875rem;
   font-weight: 500;
 }
-.c2_txt{
+.c2_txt {
   /* color: #5f5f5f; */
   font-size: 1rem;
-  color: rgba(0,0,0,.6);
+  color: rgba(0, 0, 0, 0.6);
   line-height: 26px;
 }
 
-
 /* content3 */
-.content3 {
-  /* width: 100%; */
-  background: linear-gradient(140deg, #9dc0ed, #fcf4f6);
-}
-
 .content3 h3,
 .content2 h3 {
   position: absolute;
@@ -330,11 +325,10 @@ header h1 {
 .content3_area li {
   padding-left: 45px;
   margin: 0 auto;
-  /* margin: 0 0 50px 40px; */
   box-sizing: border-box;
   position: relative;
 }
-.content3_area span{
+.content3_area span {
   font-size: 1.1875rem;
   display: block;
   margin-top: 0.9em;
@@ -342,13 +336,11 @@ header h1 {
   color: #2b2b2b;
   font-weight: 500;
 }
-.content3_area p{
+.content3_area p {
   /* color: #5f5f5f; */
   font-size: 1rem;
-  color: rgba(0,0,0,.6);
+  color: rgba(0, 0, 0, 0.6);
   line-height: 26px;
-
-
 }
 .content3_area li a img {
   /* box-sizing: border-box;
@@ -361,7 +353,6 @@ header h1 {
 .content3_area .c3_right_bottom {
   margin: 120px 0 50px;
 }
-
 /* footer */
 footer {
   background: #fff;
@@ -393,17 +384,17 @@ footer {
 .ft_right img {
   padding: 10px;
 }
-.fb_left{
+.fb_left {
   position: relative;
   left: 0;
   margin-top: 20px;
   font-weight: 300;
 }
-.fb_left p:first-child{
+.fb_left p:first-child {
   position: relative;
   left: -181px;
 }
-.fb_left p:nth-child(2){
+.fb_left p:nth-child(2) {
   position: relative;
   left: -146px;
 }
@@ -441,4 +432,35 @@ footer {
 }
 .to_top span:hover {
   color: #4477be;
+}
+
+
+/* ========
+ MEDIA QUERY
+========== */
+@media screen and (min-width: 1275px) and (max-width: 1425px){
+  .gnb .gnb_tit:nth-child(1) {
+   margin-left: 0;
+}
+}
+@media screen and (max-width: 1274px){
+  .gnb{
+    display: none;
+  }
+.btn li:first-child, .btn li:nth-child(2){
+  display: none;
+}
+  .btn li:last-child {
+    display: inline-block
+  }
+}
+@media screen and (max-width: 900px){
+  .content2_area li{
+    width: 100%;
+    padding: 0 70px 50px 90px;
+  }
+  .content3_area li{
+    width: 100%;
+    padding: 0 70px 50px 90px;
+  }
 }
