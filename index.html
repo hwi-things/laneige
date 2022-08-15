@@ -98,7 +98,7 @@
           <h1 class="fl"><a href="#">라네즈 메인페이지</a></h1>
           <ul class="gnb container cf">
             <li class="gnb_tit fl">
-              <a href="#">브랜드</a>
+              <a href="./sub_page/index.html">브랜드</a>
               <ul class="gnb_depth cf">
                 <li class="fl"><a href="#">브랜드 스토리</a></li>
                 <li class="fl"><a href="#">브랜드 캐릭터</a></li>
@@ -107,21 +107,21 @@
               </ul>
             </li>
             <li class="gnb_tit fl">
-              <a href="#">LBLL</a>
+              <a href="./sub_page/index.html">LBLL</a>
               <ul class="gnb_depth cf">
                 <li class="fl"><a href="#">소개</a></li>
                 <li class="fl"><a href="#">연구&영상</a></li>
               </ul>
             </li>
             <li class="gnb_tit fl">
-              <a href="#">미츠 아트</a>
+              <a href="./sub_page/index.html">미츠 아트</a>
               <ul class="gnb_depth cf">
                 <li class="fl"><a href="#">사그마이스터 앤 월시</a></li>
                 <li class="fl"><a href="#">노보</a></li>
               </ul>
             </li>
             <li class="gnb_tit fl">
-              <a href="#">베스트 & 신상품</a>
+              <a href="./sub_page/index.html">베스트 & 신상품</a>
               <ul class="gnb_depth cf">
                 <li class="fl"><a href="#">신상품</a></li>
                 <li class="fl"><a href="#">어워드 위너</a></li>
@@ -129,7 +129,7 @@
               </ul>
             </li>
             <li class="gnb_tit fl">
-              <a href="#">스킨케어</a>
+              <a href="./sub_page/index.html">스킨케어</a>
               <ul class="gnb_depth cf">
                 <li>
                   <h2><a href="#">전체보기</a></h2>
@@ -186,7 +186,7 @@
               </ul>
             </li>
             <li class="gnb_tit fl">
-              <a href="#">메이크업</a>
+              <a href="./sub_page/index.html">메이크업</a>
               <ul class="gnb_depth cf">
                 <li>
                   <h2><a href="#">전체보기</a></h2>
@@ -230,7 +230,7 @@
               </ul>
             </li>
             <li class="gnb_tit fl">
-              <a href="#">옴므</a>
+              <a href="./sub_page/index.html">옴므</a>
               <ul class="gnb_depth cf">
                 <li>
                   <h2><a href="#">전체보기</a></h2>
@@ -272,24 +272,24 @@
               </ul>
             </li>
             <li class="gnb_tit fl">
-              <a href="#">비스포크</a>
+              <a href="./sub_page/index.html">비스포크</a>
               <ul class="gnb_depth">
                 <li><a href="#">비스포크 네오</a></li>
               </ul>
             </li>
-            <li class="gnb_tit fl"><a href="#">이벤트</a></li>
+            <li class="gnb_tit fl"><a href="./sub_page/index.html">이벤트</a></li>
           </ul>
           <div class="btn">
             <ul class="cf">
               <li>
-                <a href="#"
+                <a href="./sub_page/index.html"
                   ><span class="material-symbols-outlined">
                     account_circle
                   </span></a
                 >
               </li>
               <li>
-                <a href="#"
+                <a href="./sub_page/index.html"
                   ><span class="material-symbols-outlined">
                     location_on
                   </span></a
@@ -308,6 +308,7 @@
             </ul>
           </div>
         </div>
+        <div class="overlay"></div>
         <!-- //.container -->
       </header>
       <div id="contents">
@@ -753,5 +754,33 @@
         },
       });
     </script>
+
+<script>
+$(function () {
+  //변수
+  var firstmenu = $(".gnb_tit"),
+    header = $("header"),
+    headerHeight = header.height();
+
+  firstmenu.mouseenter(function () {
+    firstmenu.find(".gnb_depth").hide();
+    $(this).find(".gnb_depth").show();
+    $(".overlay").addClass("show");
+    
+  });
+  firstmenu.mouseleave(function () {
+    header.stop().animate(
+      {
+        height: headerHeight,
+      },
+      1000
+    );
+    $(this).find(".gnb_depth").hide();
+    $(".overlay").removeClass("show");
+  });
+});
+</script>
+
+
   </body>
 </html>

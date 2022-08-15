@@ -44,6 +44,9 @@ header h1 {
 .btn li:nth-child(3) span {
   font-size: 30px;
 }
+.btn li:last-child {
+  display: none;
+}
 /* gnb */
 .gnb {
   box-sizing: border-box;
@@ -55,18 +58,18 @@ header h1 {
   font-weight: 200;
 }
 /* .gnb_tit::before{
-    content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      width: 0%;
-      bottom: 0;
-      z-index: 102;
-      height: 3px;
-      margin: 0 auto;
-      background-color: #000;
-      transition: width .36s ease;
-  } */
+  content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 0%;
+    bottom: 0;
+    z-index: 102;
+    height: 3px;
+    margin: 0 auto;
+    background-color: #000;
+    transition: width .36s ease;
+} */
 .gnb_tit a {
   padding-bottom: 30px;
 }
@@ -74,11 +77,19 @@ header h1 {
   background: #f7f7f7;
   position: absolute;
   left: 0;
-  top: 61px;
+  top: 60px;
   z-index: 100;
   width: 100%;
   display: none;
   padding-left: 290px;
+  border-top: 1px solid #ddd;
+}
+.gnb_depth h2 {
+  padding-top: 20px;
+  font-size: 14px;
+  color: #5f5f5f;
+  line-height: 1;
+  font-weight: 300;
 }
 .gnb .gnb_tit:nth-child(2) .gnb_depth {
   padding-left: 28%;
@@ -90,13 +101,13 @@ header h1 {
   padding-left: 36%;
 }
 .gnb .gnb_tit:nth-child(5) .gnb_depth {
-  padding-left: 20%;
+  padding-left: 25%;
 }
 .gnb .gnb_tit:nth-child(6) .gnb_depth {
-  padding-left: 20%;
+  padding-left: 25%;
 }
 .gnb .gnb_tit:nth-child(7) .gnb_depth {
-  padding-left: 20%;
+  padding-left: 25%;
 }
 .gnb .gnb_tit:nth-child(8) .gnb_depth {
   padding-left: 62%;
@@ -107,9 +118,6 @@ header h1 {
 .gnb li:hover .gnb_depth {
   display: block;
 }
-.gnb_depth h2 {
-  font-size: 1rem;
-}
 .gnb_depth h3 {
   font-size: 1rem;
   padding-bottom: 10px;
@@ -117,6 +125,10 @@ header h1 {
   line-height: 1;
   width: 100%;
   display: block;
+  margin-bottom: 10px;
+}
+.gnb_depth {
+  z-index: 780;
 }
 .gnb_depth li {
   font-size: 1rem;
@@ -133,12 +145,25 @@ header h1 {
 }
 .gnb_depth2 {
   padding-right: 70px;
+  width: 140px;
 }
 .gnb_depth2 li {
-  font-size: 14.5px;
+  font-size: 14px;
   padding: 0.5em 0;
   color: #5f5f5f;
-  line-height: 1;
+  line-height: 0.94;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+}
+.overlay.show {
+  opacity: 1;
+  z-index: 777;
 }
 
 /* sub_page */
@@ -155,7 +180,7 @@ header h1 {
 .top_nav a:hover {
   text-decoration: underline;
 }
-h2 {
+#contents h2 {
   display: block;
   text-align: center;
   font-size: 2.5rem;
@@ -237,62 +262,62 @@ h2 {
 }
 /* footer */
 footer {
-    background: #fff;
-    border-top: 1px solid #ddd;
-  }
-  .footer_top {
-    display: block;
-    height: 40px;
-  }
-  .ft_left li {
-    float: left;
-    padding: 10px;
-    margin-left: 20px;
-    font-size: 0.93rem;
-  }
-  .ft_left li:first-child {
-    margin-left: 0;
-    padding-left: 0;
-  }
-  .ft_right {
-    position: relative;
-    left: 1011px;
-    top: -43px;
-    width: 300px;
-  }
-  .ft_right li {
-    float: left;
-  }
-  .ft_right img {
-    padding: 10px;
-  }
-  .fb_left {
-    position: relative;
-    left: 0;
-    margin-top: 20px;
-    font-weight: 300;
-  }
-  .fb_left p:first-child {
-    position: relative;
-    left: -181px;
-  }
-  .fb_left p:nth-child(2) {
-    position: relative;
-    left: -146px;
-  }
-  .fb_left p:last-child {
-    font-size: 14px;
-  }
-  .fb_left img {
-    width: 72px;
-    position: relative;
-    left: -114px;
-    top: -12px;
-  }
-  .footer_bottom {
-    padding-bottom: 100px;
-    border-top: 1px solid #ddd;
-  }  
+  background: #fff;
+  border-top: 1px solid #ddd;
+}
+.footer_top {
+  display: block;
+  height: 40px;
+}
+.ft_left li {
+  float: left;
+  padding: 10px;
+  margin-left: 20px;
+  font-size: 0.93rem;
+}
+.ft_left li:first-child {
+  margin-left: 0;
+  padding-left: 0;
+}
+.ft_right {
+  position: relative;
+  left: 1011px;
+  top: -43px;
+  width: 300px;
+}
+.ft_right li {
+  float: left;
+}
+.ft_right img {
+  padding: 10px;
+}
+.fb_left {
+  position: relative;
+  left: 0;
+  margin-top: 20px;
+  font-weight: 300;
+}
+.fb_left p:first-child {
+  position: relative;
+  left: -181px;
+}
+.fb_left p:nth-child(2) {
+  position: relative;
+  left: -146px;
+}
+.fb_left p:last-child {
+  font-size: 14px;
+}
+.fb_left img {
+  width: 72px;
+  position: relative;
+  left: -114px;
+  top: -12px;
+}
+.footer_bottom {
+  padding-bottom: 100px;
+  border-top: 1px solid #ddd;
+}
 .to_top {
   position: fixed;
   right: 30px;
