@@ -1,4 +1,49 @@
 @charset "UTF-8";
+
+/* 
+@font-face {
+  font-family: "Arita";
+  font-style: normal;
+  font-weight: 300;
+  src: url(../font/AritaDotum-Light.woff) format("woff"); 
+}
+
+@font-face {
+  font-family: "Arita";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/Arita-dotum-Medium.woff) format("woff"); 
+}
+
+@font-face {
+  font-family: "Arita";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../font/Arita-Dotum-SemiBold.woff) format("woff"); 
+}
+
+@font-face {
+  font-family: "Arita";
+  font-style: normal;
+  font-weight: 800;
+  src: url(../font/Arita-Dotum-Bold.woff2) format('woff2'), 
+        url(../font/Arita-Dotum-Bold.woff) format("woff"); 
+}
+@font-face {
+  font-family: "brandon-grotesque";
+  font-style: normal;
+  font-weight: 600;
+  src: url(../font/3A5CB9_1_0.woff) format("woff"); }
+@font-face {
+  font-family: "brandon-grotesque";
+  src: url(../font/HVDFonts-BrandonGrotesque-Bold.woff) format("woff"); 
+  font-style: normal;
+  font-weight: 700;}
+ */
+
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +61,7 @@ input,
 label {
   margin: 0;
   padding: 0;
-  font-family: "Arita", sans-serif;
+  font-family: "Arita", "Noto Sans KR", "NotoSans", "Titillium Web", sans-serif;
   letter-spacing: -0.025em;
   /* font-family: "Nanum Gothic", "돋움", Dotum, Helvetica, Verdana, Arial,
     sans-serif; */
