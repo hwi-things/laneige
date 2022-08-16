@@ -318,9 +318,26 @@ footer {
   padding-bottom: 100px;
   border-top: 1px solid #ddd;
 }
+.fb_right{
+  position: relative;
+ left: 920px;
+ top: -77px;
+}
+.lang_select{
+  display: inline-block;
+  width: 260px;
+  border: 1px solid #2b2b2b;
+  box-sizing: border-box;
+  padding: 10px 14px;
+}
+.lang_select option{
+  font-size: 16px;
+  padding: 12px 14px;
+}
+
 .to_top {
   position: fixed;
-  right: 30px;
+  right: 50px;
   bottom: 112px;
   text-align: center;
   background: none;

@@ -277,7 +277,9 @@
                 <li><a href="#">비스포크 네오</a></li>
               </ul>
             </li>
-            <li class="gnb_tit fl"><a href="./sub_page/index.html">이벤트</a></li>
+            <li class="gnb_tit fl">
+              <a href="./sub_page/index.html">이벤트</a>
+            </li>
           </ul>
           <div class="btn">
             <ul class="cf">
@@ -312,7 +314,7 @@
         <!-- //.container -->
       </header>
       <div id="contents">
-        <section class="banner">
+        <div class="banner">
           <div class="swiper BannerSwiper">
             <span class="stop"></span>
             <ul class="swiper-wrapper">
@@ -415,7 +417,7 @@
               ><span class="swiper-pagination-bullet"></span>
             </div>
           </div>
-        </section>
+        </div>
         <section class="content1">
           <div class="container cf">
             <video src="./images/c1-bg.mp4" autoplay muted loop></video>
@@ -696,18 +698,26 @@
               <a href="#"><img src="./images/icon_wa.png" alt="" /></a>
               <p><b>© AMOREPACIFIC</b> CORPORATION. ALL RIGHTS RESERVED.</p>
             </div>
-
             <div class="fb_right">
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
+              <select name="lang" class="lang_select">
+                <option disabled selected>한국/한국어</option>
+                <option value="int/en">INTERNATIONAL/ENGLISH</option>
+                <option value="cn/zh">中国大陆/中文</option>
+                <option value="sg/en">SINGAPORE/ENGLISH</option>
+                <option value="my/en">MALAYSIA/ENGLISH</option>
+                <option value="th/th">ประเทศไทย/ไทย</option>
+                <option value="vn/vi">VIỆT NAM/TIẾNG VIỆT</option>
+                <option value="id/id">INDONESIA/BAHASA INDONESIA</option>
+                <option value="hk/en">HONGKONG CHINA/ENGLISH</option>
+                <option value="hk/zh">中國香港/繁體中文</option>
+                <option value="ca/en">CANADA/ENGLISH</option>
+                <option value="us/en">UNITED STATES/ENGLISH</option>
+              </select>
             </div>
           </div>
+          <!-- //.container -->
         </div>
+        <!-- //.footer_bottom -->
       </footer>
     </div>
     <p class="to_top">
@@ -733,7 +743,7 @@
           // autoControlsSelector : ".BannerSwiper .stop",
         },
         autoplay: {
-          delay: 5500,
+          delay: 6000,
           disableOnInteraction: false,
         },
       });
@@ -754,57 +764,63 @@
       });
     </script>
 
-<script>
-$(function () {
-  //변수
-  var firstmenu = $(".gnb_tit"),
-    header = $("header"),
-    headerHeight = header.height();
+    <script>
+      $(function () {
+        //변수
+        var firstmenu = $(".gnb_tit"),
+          header = $("header"),
+          headerHeight = header.height();
 
-  firstmenu.mouseenter(function () {
-    firstmenu.find(".gnb_depth").hide();
-    $(this).find(".gnb_depth").show();
-    $(".overlay").addClass("show");
-    
-  });
-  firstmenu.mouseleave(function () {
-    header.stop().animate(
-      {
-        height: headerHeight,
-      },
-      1000
-    );
-    $(this).find(".gnb_depth").hide();
-    $(".overlay").removeClass("show");
-  });
-});
-</script>
-<script>
-  $(document).ready(function(){
-    $(window).scroll(function(){
-      $('.c2_left').each(function(i){
-        var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-        var bottom_of_window = $(window).scrollTop() + $(window).height();
-        if(bottom_of_window > bottom_of_object/2){
-          $(this).animate({'opacity':'1','top':'0px'},3000);
-        }
+        firstmenu.mouseenter(function () {
+          firstmenu.find(".gnb_depth").hide();
+          $(this).find(".gnb_depth").show();
+          $(".overlay").addClass("show");
+        });
+        firstmenu.mouseleave(function () {
+          header.stop().animate(
+            {
+              height: headerHeight,
+            },
+            1000
+          );
+          $(this).find(".gnb_depth").hide();
+          $(".overlay").removeClass("show");
+        });
       });
-      $('.c2_right').each(function(i){
-        var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-        var bottom_of_window = $(window).scrollTop() + $(window).height();
-        if(bottom_of_window > bottom_of_object/2){
-          $(this).animate({'opacity':'1','top':'0px'},3000);
-        }
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          $(".c2_left").each(function (i) {
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if (bottom_of_window > bottom_of_object / 2) {
+              $(this).animate({ opacity: "1", top: "0px" }, 3000);
+            }
+          });
+          $(".c2_right").each(function (i) {
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if (bottom_of_window > bottom_of_object / 2) {
+              $(this).animate({ opacity: "1", top: "0px" }, 3000);
+            }
+          });
+          $(".c3_right_top").each(function (i) {
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if (bottom_of_window > bottom_of_object / 2) {
+              $(this).animate({ opacity: "1", top: "0px" }, 4000);
+            }
+          });
+          $(".c3_left_bottom").each(function (i) {
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if (bottom_of_window > bottom_of_object / 2) {
+              $(this).animate({ opacity: "1", top: "0px" }, 4500);
+            }
+          });
+        });
       });
-      $('.c3_right_top').each(function(i){
-        var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-        var bottom_of_window = $(window).scrollTop() + $(window).height();
-        if(bottom_of_window > bottom_of_object/2){
-          $(this).animate({'opacity':'1','top':'0px'},4000);
-        }
-      });
-    });
-  });
-</script>
+    </script>
   </body>
 </html>
