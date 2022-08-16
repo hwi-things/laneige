@@ -328,7 +328,22 @@ header h1 {
   color: rgba(0, 0, 0, 0.6);
   line-height: 26px;
 }
+.c2_left{
+  opacity: 0;
+  position: relative;
+  top: 50px;
+}
+.c2_right{
+  opacity: 0;
+  position: relative;
+  top: 50px;
+}
+.c3_right_top{
+  opacity: 0;
+  position: relative;
+  top: 50px;
 
+}
 /* content3 */
 .content3 h3,
 .content2 h3 {
