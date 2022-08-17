@@ -50,9 +50,9 @@
   border: 0;
   -webkit-text-size-adjust: none;
   -webkit-font-smoothing: antialiased;
-  font-family: "Arita", sans-serif;
-  letter-spacing: -0.025em;
-  color: #000;
+  font-family: "Noto Sans KR", "NotoSans",  "Arita", "Titillium Web", sans-serif;
+  /* letter-spacing: -0.025em; */
+  color: #222;
 }
 body,
 h1,
@@ -62,10 +62,10 @@ label {
   margin: 0;
   padding: 0;
   font-family: "Noto Sans KR", "NotoSans",  "Arita", "Titillium Web", sans-serif;
-  letter-spacing: -0.025em;
+  /* letter-spacing: -0.025em; */
   /* font-family: "Nanum Gothic", "돋움", Dotum, Helvetica, Verdana, Arial,
     sans-serif; */
-  color: #000;
+  color: #222;
 }
 /* ->위에 전체 선택자 설정과 동일 */
 a {
@@ -94,5 +94,4 @@ img {
 html {
   overflow-y: scroll;
   overflow-x: hidden;
-
 }

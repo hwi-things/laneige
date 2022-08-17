@@ -52,24 +52,11 @@ header h1 {
   box-sizing: border-box;
 }
 .gnb_tit {
-  font-size: 1.1rem;
+  font-size: 18px;
   line-height: 1;
-  padding: 1.2em 18px 0;
-  font-weight: 200;
+  padding: 20px 19px 0;
+  font-weight: 300;
 }
-/* .gnb_tit::before{
-  content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 0%;
-    bottom: 0;
-    z-index: 102;
-    height: 3px;
-    margin: 0 auto;
-    background-color: #000;
-    transition: width .36s ease;
-} */
 .gnb_tit a {
   padding-bottom: 30px;
 }
@@ -85,8 +72,7 @@ header h1 {
   border-top: 1px solid #ddd;
 }
 .gnb_depth h2 {
-  padding-top: 20px;
-  font-size: 14px;
+  font-size: 17px;
   color: #5f5f5f;
   line-height: 1;
   font-weight: 300;
@@ -119,33 +105,41 @@ header h1 {
   display: block;
 }
 .gnb_depth h3 {
-  font-size: 1rem;
+  font-size: 17px;
   padding-bottom: 10px;
   border-bottom: 1px solid #2b2b2b;
   line-height: 1;
   width: 100%;
   display: block;
   margin-bottom: 10px;
+  font-weight: 500;
 }
 .gnb_depth {
   z-index: 780;
 }
 .gnb_depth li {
-  font-size: 1rem;
-  padding: 17px 20px 14px;
+  font-size: 17px;
+  padding: 17px 20px 18px;
 }
 .gnb_depth img {
   width: 260px;
 }
 .gnb_depth b {
   color: #4477be;
-  font-size: 15px;
+  font-size: 16px;
   display: block;
-  margin: 20px 0 10px 0;
+  margin: 17px 0 10px 0;
 }
-.gnb_depth2 {
-  padding-right: 70px;
-  width: 140px;
+.gnb_depth span{
+  font-size: 16px;
+  padding-bottom: 17px;
+}
+.gnb .gnb_depth2 {
+  padding-right: 50px;
+  width: 150px;
+}
+.gnb .gnb_depth2_tit{
+  padding: 0 20px 18px;
 }
 .gnb_depth2 li {
   font-size: 14px;
@@ -192,7 +186,7 @@ header h1 {
 .event_tabs {
   display: block;
   text-align: center;
-  font-size: 1.0625rem;
+  font-size: 18px;
   padding: 13px 0;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
@@ -204,12 +198,13 @@ header h1 {
 .event_tabs a:first-child {
   color: #5f5f5f;
   margin-right: 60px;
+  font-weight: 300;
 }
 .event_tabs a:first-child:hover {
   border-bottom: 2px solid #5f5f5f;
 }
 .event_tabs a:last-child {
-  font-weight: bold;
+  font-weight: 500;
   border-bottom: 2px solid #222;
 }
 .event_main_area li {
@@ -225,14 +220,16 @@ header h1 {
 }
 .event_main_area p {
   padding: 0.9375rem 0 0.4rem 0;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 300;
+  letter-spacing: -0.5px;
 }
 .event_main_area span {
   color: #5f5f5f;
-  font-size: 0.875rem;
+  font-size: 13px;
   padding-bottom: 0.9375rem;
   display: block;
+  font-weight: 300;
 }
 .page_numbers {
   display: block;

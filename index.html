@@ -95,7 +95,14 @@
     <div id="warp">
       <header>
         <div class="header_area cf">
-          <h1 class="fl"><a href="#">라네즈 메인페이지</a></h1>
+          <h1 class="fl"><a href="index.html">라네즈 메인페이지</a></h1>
+          <p class="openMOgnb">
+            <a href="#"
+              ><b class="ir_so"
+                ><span class="material-symbols-outlined"> dehaze </span></b
+              ><span></span><span></span><span></span
+            ></a>
+          </p>
           <ul class="gnb container cf">
             <li class="gnb_tit fl">
               <a href="./sub_page/index.html">브랜드</a>
@@ -281,6 +288,47 @@
               <a href="./sub_page/index.html">이벤트</a>
             </li>
           </ul>
+          <div class="mobile_gnb">
+            <ul class="mobile_gnb_tit">
+              <li><a href="./sub_page/index.html">브랜드</a></li>
+              <li><a href="./sub_page/index.html">LBLL</a></li>
+              <li><a href="./sub_page/index.html">미츠 아트</a></li>
+              <li><a href="./sub_page/index.html">베스트 & 신상품</a></li>
+              <li><a href="./sub_page/index.html">스킨케어</a></li>
+              <li><a href="./sub_page/index.html">메이크업</a></li>
+              <li><a href="./sub_page/index.html">옴므</a></li>
+              <li><a href="./sub_page/index.html">비스포크</a></li>
+              <li><a href="./sub_page/index.html">이벤트</a></li>
+            </ul>
+            <ul class="mobile_gnb_sns cf">
+              <li>
+                <a href="#"
+                  ><img src="./images/icon_instagram.png" alt="인스타그램"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="./images/icon_facebook.png" alt="페이스북"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="./images/icon_youtube.png" alt="유투브"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="./images/icon_tiktok.png" alt="틱톡"
+                /></a>
+              </li>
+            </ul>
+
+            <p class="closePop">
+              <a href="#"
+                ><span class="material-symbols-outlined"> close </span></a
+              >
+            </p>
+          </div>
           <div class="btn">
             <ul class="cf">
               <li>
@@ -300,11 +348,6 @@
               <li>
                 <a href="#"
                   ><span class="material-symbols-outlined"> search </span></a
-                >
-              </li>
-              <li class="btn_hide">
-                <a href="#"
-                  ><span class="material-symbols-outlined"> dehaze </span></a
                 >
               </li>
             </ul>
@@ -618,8 +661,8 @@
                   />
                   <span>명동 쇼룸</span>
                   <p>
-                    편안하게 제품을 체험하고 브랜드를 경험할 수 있는 라네즈
-                    브랜드 공간
+                    편안하게 제품을 체험하고 브랜드를 경험할 수 있는 <br />
+                    라네즈 브랜드 공간
                   </p></a
                 >
               </li>
@@ -816,6 +859,18 @@
             }
           });
         });
+      });
+    </script>
+    <script>
+      $(".openMOgnb .ir_so").click(function (e) {
+        e.preventDefault();
+        $("header").addClass("on");
+        $("header .mobile_gnb").slideDown("fast");
+      });
+      $(".closePop").click(function (e) {
+        e.preventDefault();
+        $("header .mobile_gnb").slideUp("fast");
+        $("header").removeClass("on");
       });
     </script>
   </body>

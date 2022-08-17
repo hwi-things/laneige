@@ -48,18 +48,22 @@ header h1 {
 .btn li:nth-child(3) span {
   font-size: 30px;
 }
-.btn li:last-child {
+.btn .btn_hide,
+.btn .btn_close {
   display: none;
 }
 /* gnb */
+.mobile_gnb {
+  display: none;
+}
 .gnb {
   box-sizing: border-box;
 }
 .gnb_tit {
-  font-size: 1.1rem;
+  font-size: 18px;
   line-height: 1;
-  padding: 1.2em 18px 0;
-  font-weight: 200;
+  padding: 20px 19px 0;
+  font-weight: 300;
 }
 .gnb_tit a {
   padding-bottom: 30px;
@@ -76,8 +80,7 @@ header h1 {
   border-top: 1px solid #ddd;
 }
 .gnb_depth h2 {
-  padding-top: 20px;
-  font-size: 14px;
+  font-size: 17px;
   color: #5f5f5f;
   line-height: 1;
   font-weight: 300;
@@ -110,33 +113,41 @@ header h1 {
   display: block;
 }
 .gnb_depth h3 {
-  font-size: 1rem;
+  font-size: 17px;
   padding-bottom: 10px;
   border-bottom: 1px solid #2b2b2b;
   line-height: 1;
   width: 100%;
   display: block;
   margin-bottom: 10px;
+  font-weight: 500;
 }
 .gnb_depth {
   z-index: 780;
 }
 .gnb_depth li {
-  font-size: 1rem;
-  padding: 17px 20px 14px;
+  font-size: 17px;
+  padding: 17px 20px 18px;
 }
 .gnb_depth img {
   width: 260px;
 }
 .gnb_depth b {
   color: #4477be;
-  font-size: 15px;
+  font-size: 16px;
   display: block;
-  margin: 20px 0 10px 0;
+  margin: 17px 0 10px 0;
 }
-.gnb_depth2 {
-  padding-right: 70px;
-  width: 140px;
+.gnb_depth span {
+  font-size: 16px;
+  padding-bottom: 17px;
+}
+.gnb .gnb_depth2 {
+  padding-right: 50px;
+  width: 150px;
+}
+.gnb .gnb_depth2_tit {
+  padding: 0 20px 18px;
 }
 .gnb_depth2 li {
   font-size: 14px;
@@ -150,6 +161,10 @@ header h1 {
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
   opacity: 0;
+}
+.openMOgnb,
+.closePop {
+  display: none;
 }
 .overlay.show {
   opacity: 1;
@@ -372,7 +387,7 @@ header h1 {
   font-weight: 500;
 }
 .content3_area p {
-  font-size: 1rem;
+  font-size: 16pxs;
   color: rgba(0, 0, 0, 0.6);
   line-height: 26px;
 }
@@ -380,10 +395,10 @@ header h1 {
   width: 100%;
 }
 .content3_area .c3_left_bottom {
-  margin-bottom: 50px;
+  margin-bottom: 150px;
 }
 .content3_area .c3_right_bottom {
-  margin: 120px 0 50px;
+  margin: 312px 0 50px;
 }
 /* footer */
 footer {
@@ -493,15 +508,79 @@ footer {
   .gnb {
     display: none;
   }
+  .btn ul {
+    margin: 14px 7% 0 0;
+  }
+  .openMOgnb {
+    display: block;
+    position: absolute;
+    left: 94%;
+    top: 9px;
+  }
+  .openMOgnb span,
+  .closePop span {
+    color: #79a3dc;
+    font-size: 30px;
+    font-weight: 300;
+  }
+  .openMOgnb span:hover {
+    color: #4477be;
+  }
+  .closePop {
+    display: inline-block;
+    position: absolute;
+    top: -46px;
+    left: 94%;
+    width: 45px;
+    height: 45px;
+    background: #fff;
+  }
+  .header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+  }
+  .mobile_gnb {
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    background: #fff;
+    height: 100vh;
+    z-index: 9999;
+  }
+  .mobile_gnb_tit li {
+    padding: 20px 20px;
+    font-size: 18px;
+    font-weight: 300;
+    border-bottom: 1px solid #ddd;
+  }
+  .mobile_gnb li:first-child {
+    border-top: 1px solid #ddd;
+  }
+  .mobile_gnb_sns {
+    display: block;
+    margin: 50px 0 0 20px;
+  }
+  .mobile_gnb_sns li {
+    float: left;
+    padding-right: 17px;
+  }
+  .mobile_gnb_sns li img {
+    width: 23px;
+  }
   .btn li:first-child,
   .btn li:nth-child(2) {
     display: none;
   }
-  .btn li:last-child {
-    display: inline-block;
+  .btn li:nth-child(3) {
+    margin-right: 40%;
   }
 }
 @media screen and (max-width: 900px) {
+  header h1 {
+    padding: 13px 0 0 10px;
+    width: 120px;
+  }
   .ContentSwiper .swiper-slide img {
     max-width: 13rem;
     /* max-height: 24.6875rem; */
@@ -524,6 +603,9 @@ footer {
   .content3_area li {
     width: 100%;
     padding: 0 75px 50px 95px;
+  }
+  .content3_area .c3_right_bottom {
+    margin: 0px 0 50px;
   }
   .to_top {
     position: fixed;
